@@ -25,4 +25,19 @@ public class SaiMonoBehaviour : MonoBehaviour
     {
         //For override
     }
+
+    protected virtual void Start()
+    {
+        //For override
+    }
+
+    protected virtual void OnEnable()
+    {
+        //For override
+    }
+
+    protected virtual void OnDisable()
+    {
+        //For override
+    }
 }
