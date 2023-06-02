@@ -13,7 +13,7 @@ public class SaiMonoBehaviour : MonoBehaviour
     protected virtual void Awake() 
     {
         this.LoadComponents();
-        this.ResetValue();
+        //this.ResetValue();
     }
 
     protected virtual void LoadComponents()

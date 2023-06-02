@@ -12,6 +12,7 @@ public class GameCtrl : SaiMonoBehaviour
 
     protected override void Awake()
     {
+        Debug.Log("GameCtrl Awake");
         base.Awake();
         if (GameCtrl.instance != null) Debug.LogError("Only 1 GameManager allow to exist");
         GameCtrl.instance = this;

@@ -70,5 +70,4 @@ public class DamageReceiver : SaiMonoBehaviour
     {
         //For override
     }
-
 }

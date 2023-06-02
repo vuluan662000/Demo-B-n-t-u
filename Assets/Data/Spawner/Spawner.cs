@@ -79,6 +79,8 @@ public abstract class Spawner : SaiMonoBehaviour
     {
         this.poolObjs.Add(obj);
         obj.gameObject.SetActive(false);
+        if(transform.name== "BulletSpawner") Debug.Log (transform.name+": Despawn", gameObject);
+
     }
 
     public virtual Transform GetPrefabByName(string prefabName)

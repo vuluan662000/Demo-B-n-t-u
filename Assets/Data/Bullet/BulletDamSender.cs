@@ -27,6 +27,7 @@ public class BulletDamSender : DamageSender
 
     protected virtual void DestroyBullet()
     {
+        Debug.Log(transform.parent.name + " DestroyBullet", gameObject);
         this.bulletCtrl.BulletDespawn.DespawnObject();
     }
 }

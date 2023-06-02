@@ -16,12 +16,20 @@ public class JunkFly : ParentFly
     protected override void OnEnable()
     {
         base.OnEnable();
+        //this.GetFlyDirection();
+    }
+
+    protected override void Start()
+    {
+        base.Start();
         this.GetFlyDirection();
     }
 
     protected virtual void GetFlyDirection()
     {
+        //if (GameCtrl.Instance == null) return;
         Vector3 camPos = GameCtrl.Instance.MainCamera.transform.position;
+
         Vector3 objPos = transform.parent.position;
 
         camPos.x += Random.Range(this.minCamPos, this.maxCamPos);

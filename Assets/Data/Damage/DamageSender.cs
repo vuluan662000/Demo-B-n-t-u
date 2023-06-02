@@ -15,12 +15,7 @@ public class DamageSender : SaiMonoBehaviour
 
     public virtual void Send(DamageReceiver damageReceiver)
     {
-        damageReceiver.Deduct(this.damage);
-        this.DestroyObject();
+        damageReceiver.Deduct(this.damage);        
     }
 
-    protected virtual void DestroyObject()
-    {
-        Destroy(transform.parent.gameObject);
-    }
 }

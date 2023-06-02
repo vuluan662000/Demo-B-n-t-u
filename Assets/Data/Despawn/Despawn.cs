@@ -17,6 +17,7 @@ public abstract class Despawn : SaiMonoBehaviour
     }
     public virtual void DespawnObject()
     {
+        Debug.LogError("DespawnObject", gameObject);
         Destroy(transform.parent.gameObject);
     }
 
