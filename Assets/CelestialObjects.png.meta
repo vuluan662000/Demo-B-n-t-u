@@ -5,6 +5,12 @@ TextureImporter:
   - first:
       213: 4519518871663985449
     second: CelestialObjects_0
+  - first:
+      213: 5994275585877690731
+    second: CelestialObjects_1
+  - first:
+      213: 7276018992636381005
+    second: CelestialObjects_2
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -103,7 +109,7 @@ TextureImporter:
         width: 33
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -111,6 +117,48 @@ TextureImporter:
       bones: []
       spriteID: 923c435e77e88be30800000000000000
       internalID: 4519518871663985449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CelestialObjects_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 142
+        width: 23
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b694906e2e1ff2350800000000000000
+      internalID: 5994275585877690731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CelestialObjects_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 34
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47461b49bc99f460800000000000000
+      internalID: 7276018992636381005
       vertices: []
       indices: 
       edges: []

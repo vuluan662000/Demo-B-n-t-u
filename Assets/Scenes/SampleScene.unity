@@ -274,7 +274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &108359286
 Transform:
   m_ObjectHideFlags: 0
@@ -937,8 +937,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 768744953c921d84d883457bc065fd92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holder: {fileID: 0}
-  prefabs: []
+  holder: {fileID: 1513027824}
+  spawnedCount: 0
+  prefabs:
+  - {fileID: 108359286}
   poolObjs: []
 --- !u!4 &895507362
 Transform:
@@ -969,7 +971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   junkSpawner: {fileID: 895507361}
-  spawnPoints: {fileID: 0}
+  spawnPoints: {fileID: 585324571}
 --- !u!114 &895507364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -982,7 +984,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd87a873659162418d84fbb5c7a90bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  junkCtrl: {fileID: 895507363}
+  junkSpawnerCtrl: {fileID: 895507363}
+  randomDelay: 1
+  randomTimer: 0
+  randomLimit: 9
 --- !u!1 &968224013
 GameObject:
   m_ObjectHideFlags: 0
@@ -1372,6 +1377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holder: {fileID: 695398253}
+  spawnedCount: 0
   prefabs:
   - {fileID: 483755074}
   poolObjs: []

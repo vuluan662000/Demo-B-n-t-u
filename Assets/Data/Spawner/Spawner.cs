@@ -6,6 +6,9 @@ public abstract class Spawner : SaiMonoBehaviour
 {
     [SerializeField] protected Transform holder;
 
+    [SerializeField] protected int spawnedCount = 0;
+    public int SpawnedCount => spawnedCount;
+
     [SerializeField] protected List<Transform> prefabs;
     [SerializeField] protected List<Transform> poolObjs;
     protected override void LoadComponents()
@@ -57,6 +60,7 @@ public abstract class Spawner : SaiMonoBehaviour
         newPrefab.SetPositionAndRotation(spawnPos, rotation);
 
         newPrefab.parent = this.holder;
+        this.spawnedCount++;
         return newPrefab;
     }
 
@@ -79,7 +83,7 @@ public abstract class Spawner : SaiMonoBehaviour
     {
         this.poolObjs.Add(obj);
         obj.gameObject.SetActive(false);
-        if(transform.name== "BulletSpawner") Debug.Log (transform.name+": Despawn", gameObject);
+        this.spawnedCount--;
 
     }
 
