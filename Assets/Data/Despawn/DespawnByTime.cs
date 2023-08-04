@@ -2,17 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DespawnByTime : MonoBehaviour
+public class DespawnByTime : Despawn
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] protected float delay = 2f;
+    [SerializeField] protected float timer = 0;
+
+    protected override void OnEnable()
     {
-        
+        base.OnEnable();
+        this.ResetTimer();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected virtual void ResetTimer()
     {
-        
+        this.timer = 0;
+    }
+    protected override bool CanDespawn()
+    {
+        this.timer += Time.fixedDeltaTime;
+        if (this.timer > this.delay) return true;
+        return false;
     }
 }
