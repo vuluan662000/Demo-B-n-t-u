@@ -24,11 +24,6 @@ public class JunkRandom : SaiMonoBehaviour
         Debug.Log(transform.name + ": LoadJunkCtrl", gameObject);
     }
 
-    protected override void Start()
-    {
-       // this.JunkSpawning();
-    }
-
     protected virtual void FixedUpdate()
     {
         this.JunkSpawning();
@@ -45,10 +40,10 @@ public class JunkRandom : SaiMonoBehaviour
         Transform ranPoint = this.junkSpawnerCtrl.SpawnPoints.GetRandom();
         Vector3 pos = ranPoint.position;
         Quaternion rot = transform.rotation;
-        Transform obj = this.junkSpawnerCtrl.JunkSpawner.Spawn(JunkSpawner.meteoriteOne, pos, rot);
-        obj.gameObject.SetActive(true);
 
-        //Invoke(nameof(this.JunkSpawning), 1f);
+        Transform prefab = this.junkSpawnerCtrl.JunkSpawner.RandomPrefab();
+        Transform obj = this.junkSpawnerCtrl.JunkSpawner.Spawn(prefab, pos, rot);
+        obj.gameObject.SetActive(true);
     }
     protected virtual bool RandomReachLimit()
     {
