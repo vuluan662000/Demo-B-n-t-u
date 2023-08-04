@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Ship", menuName = "ScriptableObjects/Ship")]
+[CreateAssetMenu(fileName = "Ship", menuName = "SO/Ship")]
 
 public class ShipSO : ScriptableObject
 {

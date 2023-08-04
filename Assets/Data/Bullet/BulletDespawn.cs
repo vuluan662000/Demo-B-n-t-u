@@ -6,7 +6,7 @@ public class BulletDespawn : DespawnByDistance
 {
     public override void DespawnObject()
     {
-        Debug.Log ("BulletDespawn DespawnObject", gameObject);
+        //Debug.Log ("BulletDespawn DespawnObject", gameObject);
         FXSpawner.Instance.Despawn(transform.parent);
     }
 }

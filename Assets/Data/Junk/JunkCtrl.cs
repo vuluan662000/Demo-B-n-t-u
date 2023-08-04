@@ -18,7 +18,7 @@ public class JunkCtrl : SaiMonoBehaviour
         base.LoadComponents();
         this.LoadModel();
         this.LoadJunkDespawn();
-        LoadJunkSO();
+        this.LoadJunkSO();
     }
 
     protected virtual void LoadModel()
