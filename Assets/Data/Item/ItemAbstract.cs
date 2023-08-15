@@ -17,6 +17,6 @@ public abstract class ItemAbstract : SaiMonoBehaviour
     {
         if (this.itemCtrl != null) return;
         this.itemCtrl = transform.parent.GetComponent<ItemCtrl>();
-        Debug.Log(transform.name + ": LoadJunkCtrl", gameObject);
+        Debug.Log(transform.name + ": ItemCtrl", gameObject);
     }
 }
