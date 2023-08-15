@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShipShooting : MonoBehaviour
 {
     [SerializeField] protected bool isShooting = false;
-    [SerializeField] protected float shootDelay = 1f;
+    [SerializeField] protected float shootDelay = 0.5f;
     [SerializeField] protected float shootTimer = 0f;
 
     void Update()
