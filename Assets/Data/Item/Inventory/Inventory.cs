@@ -14,7 +14,23 @@ public class Inventory : SaiMonoBehaviour
         base.Start();
          this.AddItem(ItemCode.IronOre, 16);
         // this.AddItem(ItemCode.CopperSword, 1);
-        this.AddItem(ItemCode.GoldOre, 4);
+        this.AddItem(ItemCode.GoldOre, 12);
+    }
+    public virtual bool AddItem(ItemInventory itemInventory)
+    {
+        int addCount = itemInventory.itemCount;
+        ItemProfileSO itemProfile = itemInventory.itemProfile;
+        ItemCode itemCode = itemProfile.itemCode;
+        ItemType itemType = itemProfile.itemType;
+
+        if (itemType == ItemType.Equiment) return this.AddEquiment(itemInventory);
+        return this.AddItem(itemCode, addCount);
+    }
+    public virtual bool AddEquiment(ItemInventory itemInventory)
+    {
+        if (this.IsInventoryFull()) return false;
+        this.items.Add(itemInventory);
+        return true;
     }
     public virtual bool AddItem(ItemCode itemCode, int addCount)
     {
@@ -155,6 +171,18 @@ public class Inventory : SaiMonoBehaviour
 
             itemInventory.itemCount -= deduct;
 
+        }
+
+        this.ClearEmptySlot();
+    }
+
+    public virtual void ClearEmptySlot()
+    {
+        ItemInventory itemInventory;
+        for(int i = 0; i < this.items.Count; i++)
+        {
+            itemInventory = this.items[i];
+            if (itemInventory.itemCount == 0) this.items.RemoveAt(i);
         }
     }
 }
