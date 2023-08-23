@@ -4,6 +4,6 @@ using System;
 [Serializable]
 public class ItemRecipeIngredient
 {
-    public ItemProfileSO itemProfile;
+    public ShootableObjectSO itemProfile;
     public int itemCount;
 }
