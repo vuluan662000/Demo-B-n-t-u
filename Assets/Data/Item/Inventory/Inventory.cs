@@ -19,7 +19,7 @@ public class Inventory : SaiMonoBehaviour
     public virtual bool AddItem(ItemInventory itemInventory)
     {
         int addCount = itemInventory.itemCount;
-        ShootableObjectSO itemProfile = itemInventory.itemProfile;
+        ItemProfileSO itemProfile = itemInventory.itemProfile;
         ItemCode itemCode = itemProfile.itemCode;
         ItemType itemType = itemProfile.itemType;
 
@@ -43,7 +43,7 @@ public class Inventory : SaiMonoBehaviour
     public virtual bool AddItem(ItemCode itemCode, int addCount)
     {
 
-        ShootableObjectSO itemProfile = this.GetItemProfile(itemCode);
+        ItemProfileSO itemProfile = this.GetItemProfile(itemCode);
 
         int addRemain = addCount;
         int newCount;
@@ -96,10 +96,10 @@ public class Inventory : SaiMonoBehaviour
         return itemInventory.maxStack;
     }
 
-    protected virtual ShootableObjectSO GetItemProfile(ItemCode itemCode)
+    protected virtual ItemProfileSO GetItemProfile(ItemCode itemCode)
     {
-        var profiles = Resources.LoadAll("Item", typeof(ShootableObjectSO));
-        foreach (ShootableObjectSO profile in profiles)
+        var profiles = Resources.LoadAll("Item", typeof(ItemProfileSO));
+        foreach (ItemProfileSO profile in profiles)
         {
             if (profile.itemCode != itemCode) continue;
             return profile;
@@ -127,7 +127,7 @@ public class Inventory : SaiMonoBehaviour
         return itemInventory.itemCount >= maxStack;
     }
 
-    protected virtual ItemInventory CreateEmptyItem(ShootableObjectSO itemProfile)
+    protected virtual ItemInventory CreateEmptyItem(ItemProfileSO itemProfile)
     {
         ItemInventory itemInventory = new ItemInventory
         {

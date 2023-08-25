@@ -10,8 +10,8 @@ public class JunkCtrl : SaiMonoBehaviour
     [SerializeField] protected JunkDespawn junkDespawn;
     public JunkDespawn JunkDespawn { get => junkDespawn; }
 
-    [SerializeField] protected JunkSO junkSO;
-    public JunkSO JunkSO => junkSO;
+    [SerializeField] protected ShootableOjectSO shootableOjectSO;
+    public ShootableOjectSO ShootableOjectSO => shootableOjectSO;
 
     protected override void LoadComponents()
     {
@@ -36,9 +36,9 @@ public class JunkCtrl : SaiMonoBehaviour
     }
     protected virtual void LoadJunkSO()
     {
-        if (this.junkSO != null) return;
-        string resPath = "Junk/" + transform.name;
-        this.junkSO = Resources.Load<JunkSO>(resPath);
+        if (this.shootableOjectSO != null) return;
+        string resPath = "ShootableObject/Junk/" + transform.name;
+        this.shootableOjectSO = Resources.Load<ShootableOjectSO>(resPath);
         Debug.LogWarning(transform.name + ": LoadJunkSO " + resPath, gameObject);
     }
 }

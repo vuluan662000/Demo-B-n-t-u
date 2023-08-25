@@ -7,7 +7,7 @@ public class WormHole : SaiMonoBehaviour
 {
     protected string sceneName = "GalaxyDemo";
 
-    protected virtual void OnMouseDown()
+    public virtual void OnMouseDown()
     {
         this.LoadGalaxy();
     }
