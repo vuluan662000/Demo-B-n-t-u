@@ -25,12 +25,14 @@ public class JunkDamReceiver : DamageReceiver
         this.OnDeadFX();
         this.OnDeadDrop();
         this.junkCtrl.JunkDespawn.DespawnObject();
+
     }
+
     protected virtual void OnDeadDrop()
     {
         Vector3 dropPos = transform.position;
         Quaternion dropRot = transform.rotation;
-        ItemDropSpawner.Instance.Drop(this.junkCtrl.ShootableObjectSO.dropList, dropPos, dropRot);
+        ItemDropSpawner.Instance.Drop(this.junkCtrl.ShootableObject.dropList, dropPos, dropRot);
     }
 
     protected virtual void OnDeadFX()
@@ -47,7 +49,7 @@ public class JunkDamReceiver : DamageReceiver
 
     public override void Reborn()
     {
-        this.hpMax = this.junkCtrl.ShootableObjectSO.hpMax;
+        this.hpMax = this.junkCtrl.ShootableObject.hpMax;
         base.Reborn();
     }
 }

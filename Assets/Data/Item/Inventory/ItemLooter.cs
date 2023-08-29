@@ -45,7 +45,7 @@ public class ItemLooter : SaiMonoBehaviour
 
     protected virtual void OnTriggerEnter(Collider collider)
     {
-
+     
         ItemPickupable itemPickupable = collider.GetComponent<ItemPickupable>();
         if (itemPickupable == null) return;
 
@@ -55,7 +55,7 @@ public class ItemLooter : SaiMonoBehaviour
             itemPickupable.Picked();
         }
 
-        //Debug.Log("Pickup "+ itemCode.ToString());
+        
     }
 
 

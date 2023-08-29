@@ -36,6 +36,7 @@ public class BulletImpart : BulletAbstract
 
     protected virtual void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.name);
         if (other.transform.parent == this.bulletCtrl.Shooter) return;
 
         this.bulletCtrl.DamageSender.Send(other.transform);

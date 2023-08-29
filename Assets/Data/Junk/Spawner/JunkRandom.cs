@@ -14,14 +14,13 @@ public class JunkRandom : SaiMonoBehaviour
     {
         base.LoadComponents();
         this.LoadJunkCtrl();
-       
     }
 
     protected virtual void LoadJunkCtrl()
     {
         if (this.junkSpawnerCtrl != null) return;
         this.junkSpawnerCtrl = GetComponent<JunkSpawnerCtrl>();
-        Debug.Log(transform.name + ": LoadJunkCtrl", gameObject);
+        Debug.LogWarning(transform.name + ": LoadJunkCtrl", gameObject);
     }
 
     protected virtual void FixedUpdate()
@@ -45,6 +44,7 @@ public class JunkRandom : SaiMonoBehaviour
         Transform obj = this.junkSpawnerCtrl.JunkSpawner.Spawn(prefab, pos, rot);
         obj.gameObject.SetActive(true);
     }
+
     protected virtual bool RandomReachLimit()
     {
         int currentJunk = this.junkSpawnerCtrl.JunkSpawner.SpawnedCount;

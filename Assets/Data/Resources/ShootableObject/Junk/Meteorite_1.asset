@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Meteorite_1
   m_EditorClassIdentifier: 
   objName: Shootable Object
-  objectType: 1
+  objType: 1
   hpMax: 2
   dropList:
-  - {itemSO: {fileID: 11400000, guid: b4c4034f12dec4e438d5aa0872aef1fb, type: 2}, dropRate: 0, minDrop: 0, maxDrop: 0}
+  - itemSO: {fileID: 11400000, guid: b4c4034f12dec4e438d5aa0872aef1fb, type: 2}
+    dropRate: 0
+    minDrop: 0
+    maxDrop: 0
