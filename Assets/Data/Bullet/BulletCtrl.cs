@@ -22,7 +22,7 @@ public class BulletCtrl : SaiMonoBehaviour
 
     protected virtual void LoadDamageSender()
     {
-        if (this.damageSender != null) return;
+        if (this.damageSender !=  null) return;
         this.damageSender = transform.GetComponentInChildren<DamageSender>();
         Debug.Log(transform.name + ": LoadDamageSender", gameObject);
     }
